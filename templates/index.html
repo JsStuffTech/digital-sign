@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Door Sign</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" style="width: 200px; height: auto;">
+        <h1>Your Static Name</h1>
+        <h2>Your Title</h2>
+        <h3>Office Status: {{ status }}</h3>
+        <br>
+        <a href="{{ url_for('update_status') }}">Update Office Status</a>
+    </div>
+</body>
+</html>

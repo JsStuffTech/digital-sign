@@ -1,0 +1,12 @@
+[Unit]
+Description=Digital Office Sign
+After=network.target
+
+[Service]
+User=pi  # Replace with your username if different
+WorkingDirectory=/home/pi/digital-sign  # Adjust with the correct path
+ExecStart=/home/pi/digital-sign/venv/bin/python3 /home/pi/digital-sign/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
